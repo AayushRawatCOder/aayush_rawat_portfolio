@@ -1,0 +1,111 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 80px 0;
+}
+
+.hero-content {
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--warm-terracotta), var(--warm-rust));
+  color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-soft);
+  animation: fadeInUp 1s ease-out 0.2s both;
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, var(--warm-clay), var(--warm-rust), var(--warm-terracotta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--warm-coffee);
+  margin-bottom: 32px;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--warm-coffee);
+  max-width: 700px;
+  margin: 0 auto 48px;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 48px;
+  animation: fadeInUp 1s ease-out 1s both;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--warm-coffee);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  color: var(--warm-terracotta);
+  transform: translateY(-2px);
+}
+
+.contact-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}

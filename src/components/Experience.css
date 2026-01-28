@@ -1,0 +1,135 @@
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--warm-terracotta), var(--warm-gold));
+  border-radius: 10px;
+}
+
+.timeline-item {
+  margin-bottom: 60px;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.timeline-item.left .timeline-content {
+  margin-left: 0;
+  margin-right: calc(50% + 40px);
+}
+
+.timeline-item.right .timeline-content {
+  margin-left: calc(50% + 40px);
+  margin-right: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, var(--warm-terracotta), var(--warm-rust));
+  border-radius: 50%;
+  border: 4px solid var(--warm-cream);
+  box-shadow: 0 0 0 4px var(--warm-peach);
+  z-index: 2;
+}
+
+.timeline-content {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s ease;
+  border-left: 4px solid var(--warm-terracotta);
+}
+
+.timeline-content:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+}
+
+.timeline-date {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--warm-terracotta), var(--warm-rust));
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--warm-espresso);
+  margin-bottom: 8px;
+}
+
+.timeline-content h4 {
+  font-size: 1.1rem;
+  color: var(--warm-terracotta);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.achievement {
+  margin-bottom: 16px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.achievement::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--warm-terracotta);
+  font-weight: 700;
+}
+
+.achievement strong {
+  color: var(--warm-espresso);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.achievement p {
+  color: var(--warm-coffee);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.achievement .impact {
+  color: var(--warm-terracotta);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    margin-left: 60px;
+    margin-right: 0;
+  }
+
+  .timeline-dot {
+    left: 20px;
+  }
+}

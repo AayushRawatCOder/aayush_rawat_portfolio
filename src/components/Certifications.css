@@ -1,0 +1,88 @@
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.cert-card {
+  background: white;
+  padding: 28px 24px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  border-left: 4px solid var(--warm-terracotta);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.cert-card:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-medium);
+}
+
+.cert-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--warm-espresso);
+  margin-bottom: 8px;
+}
+
+.cert-card p {
+  color: var(--warm-coffee);
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.cert-badge {
+  display: inline-block;
+  background: var(--warm-sand);
+  color: var(--warm-terracotta);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.education-section {
+  margin-top: 80px;
+}
+
+.education-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  border-left: 4px solid var(--warm-terracotta);
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.education-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--warm-espresso);
+  margin-bottom: 8px;
+}
+
+.education-card .university {
+  color: var(--warm-terracotta);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.education-card .graduation {
+  color: var(--warm-coffee);
+}
+
+@media (max-width: 768px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    padding: 32px 24px;
+  }
+}
